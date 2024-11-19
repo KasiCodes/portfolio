@@ -4,11 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum FrontendTech {
-  HTML("HTML", ExperienceLevel.PROFESSIONAL.name()), CSS("CSS", ExperienceLevel.PROFESSIONAL.name()), REACT("ReactJS",
-      ExperienceLevel.EXPERIENCED.name()), JS("JavaScript", ExperienceLevel.PROFESSIONAL.name()), TYPESCRIPT(
-          "TypeScript", ExperienceLevel.PROFESSIONAL.name()), ANGULAR("AngularJS",
-              ExperienceLevel.EXPERIENCED.name()), OJET("Oracle Javascript Extension",
-                  ExperienceLevel.PROFESSIONAL.name());
+  HTML("HTML", ExperienceLevel.INTERMEDIATE.name()), CSS("CSS", ExperienceLevel.INTERMEDIATE.name()), JS("JavaScript", ExperienceLevel.INTERMEDIATE.name()), TYPESCRIPT(
+          "TypeScript", ExperienceLevel.BEGINNER.name());
 
   private final String technology;
   private final String experienceLevel;

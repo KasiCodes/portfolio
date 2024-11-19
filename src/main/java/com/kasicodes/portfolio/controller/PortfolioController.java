@@ -96,8 +96,7 @@ public class PortfolioController {
         .onClickAction(LINKEDIN_URL).build());
     imgTagList.add(SocialMediaImgTag.builder().assetUrl(GITHUB_ASSET_URL).altName("My Github profile")
         .onClickAction(GITHUB_URL).build());
-    imgTagList.add(SocialMediaImgTag.builder().assetUrl(LEETCODE_ASSET_URL).altName("My Leetcode profile")
-        .onClickAction(LEETCODE_URL).build());
+    
 
     return imgTagList;
   }

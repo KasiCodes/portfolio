@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chandan's Portfolio</title>
+    <title>Mpho Ramapi's Portfolio</title>
     <link rel="stylesheet" th:href="@{/styles/css/style.css}" />
     <link rel="stylesheet" th:href="@{/styles/css/mediaqueries.css}" />
     <script th:src="@{./js/card.js}" defer></script>
@@ -19,10 +19,8 @@
     <div>
         <ul class="nav-links">
             <li><a th:href="@{#about}">About</a></li>
-            <li><a th:href="@{#clients}">Clients</a></li>
             <li><a th:href="@{#experience}">Experience</a></li>
             <li><a th:href="@{#projects}">Projects</a></li>
-            <li><a th:href="@{#youtube}">@proofofconceptcode</a></li>
         </ul>
     </div>
 </nav>
@@ -36,10 +34,8 @@
         </div>
         <div class="menu-links">
             <li><a th:href="@{#about}" th:onclick="toggleMenu()">About</a></li>
-            <li><a th:href="@{#clients}" th:onclick="toggleMenu()">Clients</a></li>
             <li><a th:href="@{#experience}" th:onclick="toggleMenu()">Experience</a></li>
             <li><a th:href="@{#projects}" th:onclick="toggleMenu()">Projects</a></li>
-            <li><a th:href="@{#youtube}" th:onclick="toggleMenu()">@proofofconceptcode</a></li>
         </div>
     </div>
 </nav>
@@ -109,23 +105,22 @@
                             class="icon"
                     />
                     <h3>Education</h3>
-                    <p>B.Tech. (Computer Science) <br />Bachelors Degree <em> (2015 - 2019)</em></p>
+                    <p>Software engineering <br />Bachelors Degree <em> (2023 - 2024)</em></p>
                 </div>
             </div>
             <div class="text-container">
                 <p>
-                    Hey there! I'm from Uttarakhand (India), also known as "Land of the Gods".
-                    I've more than <span th:text="${myExpInYear}">exp</span> years of professional experience in IT sector and developing
-                    Softwares for different multi national clients. A Big fan of JAVA!
+                    Hi there! I'm a passionate software engineering student with a love for problem-solving and building cool projects. 
+                    I'm currently honing my skills in software development and exploring technologies like Java, Spring Boot, and React.
                 </p>
                 <p>
-                    With my professional career, I'm also passionate about Music.
-                    I always enjoy staying at home and producing some good music!
-                    I'm not much of an outdoor person.
-                    I love rainy days where I can wrap myself in a blanket and binge-watch
-                    series without feeling guilty! I speak Hindi, English and obviously JAVA ;-P.
+                    I have a knack for coding and a growing portfolio of personal and academic projects. 
+                    When I'm not coding, you’ll find me diving into tech blogs, learning new frameworks, or brainstorming innovative ideas for future projects.
+                    Besides tech, I enjoy exploring music, binge-watching great shows, and relaxing with a warm cup of coffee on rainy days. 
+                    Oh, and I speak Python, Java, and English fluently ;-).
                 </p>
             </div>
+            
         </div>
     </div>
     <img
@@ -297,24 +292,6 @@
     />
 </section>
 
-<section id="youtube">
-    <p class="section__text__p1">Learn in public</p>
-    <h1 class="title"><a th:href="@{${youtube}}" th:target="_blank">@proofofconceptcode</a></h1>
-    <div class="youtube-wrapper">
-        <div class="details-container">
-            <a th:href="@{${youtube}}" th:target="_blank">
-                <img class="poc_banner" th:src="@{${banner}}" />
-            </a>
-        </div>
-    </div>
-    <img
-            th:src="@{${arrow.assetUrl}}"
-            th:alt="${arrow.altName}"
-            class="icon arrow"
-            th:onclick="@{location.href='./#'}"
-    />
-</section>
-
 <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
@@ -342,10 +319,8 @@
         <div class="nav-links-container">
             <ul class="nav-links">
                 <li><a th:href="@{./#about}">About</a></li>
-                <li><a th:href="@{./#clients}">Clients</a></li>
                 <li><a th:href="@{./#experience}">Experience</a></li>
                 <li><a th:href="@{./#projects}">Projects</a></li>
-                <li><a th:href="@{./#youtube}">@proofofconceptcode</a></li>
             </ul>
         </div>
     </nav>
