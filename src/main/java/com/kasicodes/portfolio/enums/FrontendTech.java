@@ -1,4 +1,4 @@
-package com.kasicodes.enums;
+package com.kasicodes.portfolio.enums;
 
 import lombok.Getter;
 

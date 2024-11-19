@@ -1,6 +1,6 @@
-package com.kasicodes.img.arrow;
+package com.kasicodes.portfolio.img.arrow;
 
-import com.kasicodes.img.ImgTagAttributes;
+import com.kasicodes.portfolio.img.ImgTagAttributes;
 
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
