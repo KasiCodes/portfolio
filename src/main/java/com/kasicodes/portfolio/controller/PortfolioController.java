@@ -3,8 +3,6 @@ package com.kasicodes.portfolio.controller;
 import com.kasicodes.portfolio.enums.*;
 import com.kasicodes.portfolio.experience.TechExperience;
 import com.kasicodes.portfolio.img.arrow.ArrowImgTag;
-import com.kasicodes.portfolio.img.client.ClientImgTag;
-import com.kasicodes.portfolio.img.project.ProjectImgTag;
 import com.kasicodes.portfolio.img.social.SocialMediaImgTag;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
@@ -25,13 +23,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.kasicodes.portfolio.Utils.Constants.*;
-import static com.kasicodes.portfolio.enums.BackendTech.*;
-import static com.kasicodes.portfolio.enums.Clients.*;
-import static com.kasicodes.portfolio.enums.DatabaseTech.*;
-import static com.kasicodes.portfolio.enums.Designations.*;
-import static com.kasicodes.portfolio.enums.DevOpsTech.*;
-import static com.kasicodes.portfolio.enums.FrontendTech.*;
-import static com.kasicodes.portfolio.enums.Titles.*;
 
 @Controller
 public class PortfolioController {
@@ -43,21 +34,16 @@ public class PortfolioController {
     model.addAttribute("myEmail", MY_EMAIL_ID);
     model.addAttribute("titles", getTitles());
     model.addAttribute("social", getSocialMediaImgTagAttributes());
-    model.addAttribute("projects", getProjectImgTagAttributes());
     model.addAttribute("profilepic", PROFILE_PIC_ASSET_URL);
     model.addAttribute("aboutpic", ABOUT_PIC_ASSET_URL);
     model.addAttribute("experience", EXPERIENCE_ASSET_URL);
     model.addAttribute("education", EDUCATION_ASSET_URL);
     model.addAttribute("arrow", getArrowImgTagAttributes());
-    model.addAttribute("checkmark", CHECKMARK_ASSET_URL);
-    model.addAttribute("clients", getClientImgTagAttributes());
     model.addAttribute("frontend", getFrontendDevelopmentExperience());
     model.addAttribute("backend", getBackendDevelopmentExperience());
     model.addAttribute("cloud", getCloudExperience());
     model.addAttribute("database", getDatabaseExperience());
     model.addAttribute("devops", getDevOpsExperience());
-    model.addAttribute("youtube", YOUTUBE_URL);
-    model.addAttribute("banner", POC_BANNER_URL);
     model.addAttribute("linkedin", LINKEDIN_URL);
     model.addAttribute("mailtoemail", MAIL_TO_EMAIL);
     model.addAttribute("email", EMAIL_ASSET_URL);
@@ -90,58 +76,20 @@ public class PortfolioController {
   private static List<SocialMediaImgTag> getSocialMediaImgTagAttributes() {
     List<SocialMediaImgTag> imgTagList = new ArrayList<>();
 
-    imgTagList.add(SocialMediaImgTag.builder().assetUrl(YOUTUBE_ASSET_URL).altName("My YouTube profile")
-        .onClickAction(YOUTUBE_URL).build());
     imgTagList.add(SocialMediaImgTag.builder().assetUrl(LINKEDIN_ASSET_URL).altName("My LinkedIn profile")
         .onClickAction(LINKEDIN_URL).build());
     imgTagList.add(SocialMediaImgTag.builder().assetUrl(GITHUB_ASSET_URL).altName("My Github profile")
         .onClickAction(GITHUB_URL).build());
-    
 
     return imgTagList;
   }
 
-  private static List<ProjectImgTag> getProjectImgTagAttributes() {
-    List<ProjectImgTag> imgTagList = new ArrayList<>();
-
-    imgTagList.add(ProjectImgTag.builder().assetUrl(LIBRBARY_ASSET_URL).altName(LIBRBARY).projectName(LIBRBARY)
-        .onGithubClickAction(LIBRBARY_GITHUB_URL).onLiveDemoClickAction(LIBRBARY_LIVE_DEMO_URL).build());
-
-    imgTagList.add(ProjectImgTag.builder().assetUrl(SECURE_FILE_UPLOAD_ASSET_URL).altName(SECURE_FILE_UPLOAD)
-        .projectName(SECURE_FILE_UPLOAD).onGithubClickAction(SECURE_FILE_UPLOAD_GITHUB_URL)
-        .onLiveDemoClickAction(SECURE_FILE_UPLOAD_LIVE_DEMO_URL).build());
-
-    imgTagList.add(ProjectImgTag.builder().assetUrl(GEHU_ONLINE_ASSET_URL).altName(GEHU_ONLINE)
-        .projectName(GEHU_ONLINE).onGithubClickAction(GEHU_ONLINE_GITHUB_URL)
-        .onLiveDemoClickAction(GEHU_ONLINE_LIVE_DEMO_URL).build());
-
-    return imgTagList;
-  }
+  
 
   private static ArrowImgTag getArrowImgTagAttributes() {
     return ArrowImgTag.builder().assetUrl(ARROW_ASSET_URL).altName("Arrow icon").build();
   }
 
-  private static List<ClientImgTag> getClientImgTagAttributes() {
-    List<ClientImgTag> imgTagList = new ArrayList<>();
-
-    imgTagList.add(ClientImgTag.builder().assetUrl(ORACLE_LOGO_URL).altName("oracle-logo")
-        .clientName(ORACLE.getValue()).designation(SDE_2.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(MACQUARIE_LOGO_URL).altName("mcq-logo")
-        .clientName(MCQ.getValue()).designation(CONSULTANT.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(AMEX_LOGO_URL).altName("amex-logo").clientName(AMEX.getValue())
-        .designation(SDE_1.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(EY_LOGO_URL).altName("ey-logo").clientName(EY.getValue())
-        .designation(SENIOR_CONSULTANT.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(HSBC_LOGO_URL).altName("hsbc-logo").clientName(HSBC.getValue())
-        .designation(SDE_1.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(CAPGEMINI_LOGO_URL).altName("capg-logo")
-        .clientName(CAPG.getValue()).designation(SENIOR_ANALYST.getValue()).draggable(false).build());
-    imgTagList.add(ClientImgTag.builder().assetUrl(INFOSYS_LOGO_URL).altName("infy-logo")
-        .clientName(INFOSYS.getValue()).designation(CONSULTANT.getValue()).draggable(false).build());
-
-    return imgTagList;
-  }
 
   private static List<TechExperience> getFrontendDevelopmentExperience() {
     List<TechExperience> imgTagList = new ArrayList<>();
