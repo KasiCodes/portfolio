@@ -164,21 +164,32 @@ section {
 
 #profile {
   display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  flex-direction: row; /* Align picture and text side by side */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional background for distinction */
 }
 
+
 .section__pic-container {
+  flex: 1; /* Make image container take up proportional space */
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  justify-content: center; /* Center image in the container */
+  align-items: center;
+}
+.profile-picture {
+  border-radius: 50%; /* Makes the picture circular or oval */
+  width: 200px; /* Adjust size */
+  height: 200px; /* Keep height proportional */
+  object-fit: cover; /* Ensures the image doesn't distort */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for aesthetic */
+  margin-right: 20px; /* Space between image and text */
 }
 
 .section__text {
-  align-self: center;
-  text-align: center;
+  flex: 2; /* Text container takes up more space */
+  text-align: left; /* Align text to the left */
 }
 
 .section__text p {
@@ -190,20 +201,28 @@ section {
 }
 
 .animated-text {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .title {
   font-size: 3rem;
-  text-align: center;
+  text-align:justify;
 }
 
 #socials-container {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  gap: 10px; /* Space between social icons */
+}
+#socials-container .icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+#socials-container .icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
 
@@ -221,9 +240,7 @@ a:hover {
 }
 
 .btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  margin-top: 15px;
 }
 
 .btn {
